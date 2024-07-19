@@ -17,32 +17,6 @@ A aplicação tem como objetivo gerenciar a agenda de consultas ambulatóriais.
 * Cada consulta tem duração de 15 minutos
 * Não pode haver overlap (sobreposição) de mais de 3 consulta ao mesmo tempo para o mesmo profissonal
 
-1. O Dr. Guilherme tem consultas agendadas para:
-```
-08:00 - 08:15
-08:15 - 08:30
-08:30 - 08:45
-08:45 - 09:00
-```
-Exemplo Válido: Neste caso, há 4 consultas consecutivas, mas sem sobreposição.
-
-2. O Dr. Guilherme tem consultas agendadas para:
-```
-08:00 - 08:15
-08:05 - 08:20
-08:10 - 08:25
-08:15 - 08:30
-```
-Exemplo Inválido: Neste caso, existem 4 consultas que se sobrepõem ao mesmo tempo, o que viola a regra.
-
-3. O Dr. Guilherme tem consultas agendadas para:
-```
-09:00 - 09:15
-09:05 - 09:20
-09:10 - 09:25
-```
-Exemplo Válido: Neste caso, há 3 consultas que se sobrepõem, o que está dentro do limite permitido.
-
 ## Pré-Requisitos para o desenvolvimento
 
 - [Docker](https://docs.docker.com/engine/install/)
