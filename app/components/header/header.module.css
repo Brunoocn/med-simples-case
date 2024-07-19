@@ -1,0 +1,27 @@
+.container {
+  background: #fff;
+}
+
+.content {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  & a {
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  & a:hover {
+    color: #0056b3;
+  }
+
+  .isActive {
+    color: #004691;
+    text-decoration: underline;
+  }
+}

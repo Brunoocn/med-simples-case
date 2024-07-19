@@ -1,0 +1,22 @@
+version: '3.9'
+name: appointments-api
+
+services:
+  db:
+    image: postgres
+    ports:
+      - "${PGPORT:-5432}:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
+    volumes:
+      - ./01-ddl.sql:/docker-entrypoint-initdb.d/01-ddl.sql:ro
+      - ./02-dml.sql:/docker-entrypoint-initdb.d/02-dml.sql:ro
+    healthcheck:
+      test: ["CMD", "pg_isready", "--username", "postgres"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 15s
+      # start_interval: 1s

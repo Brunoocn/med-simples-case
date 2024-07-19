@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.createButton {
+  margin-top: 20px;
+  padding: 10px 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  max-width: 1200px;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+
+  & button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .cancelAppointment {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+}
